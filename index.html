@@ -2,10 +2,74 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>OnlyFans API</title>
+    <title>OnlyFans API Solution</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="bg-slate-900">
+    <nav class="fixed top-0 left-0 w-screen bg-white shadow-lg shadow-slate-950 z-20">
+        <div class="container mx-auto flex justify-between items-center h-14 w-screen md:w-auto">
+            <div class="text-neutral-800 pl-4 shrink-0">
+                <h3 class="font-bold">OnlyFans API</h3>
+                <p class="font-light leading-4">solution</p>
+            </div>
+            <ul id="header-menu">
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#">Функции</a></li>
+                <li><a href="#">Преимущества</a></li>
+                <li><a href="#">Для кого</a></li>
+                <li><a href="#">Get started</a></li>
+            </ul>
+            <button id="burger" class="outline-none pr-4 md:hidden" onclick="toggleBurgerMenu()">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <a href="https://t.me" class="hidden md:block action-button-header">Начать</a>
+        </div>
+    </nav>
+    <section id="hero" class="relative">
+        <div class="decorative-circle"></div>
+        <div class="screen-section">
+            <h1 class="text-4xl md:text-5xl text-gray-100 leading-snug text-center">Управляйте OnlyFans при помощи мощного API</h1>
+            <h2 class="text-xl text-gray-100 font-light bg-slate-800 p-4 rounded-2xl mt-16 shadow-md shadow-slate-950 md:mx-20">Инструмент для разработчиков, маркетологов и креаторов, позволяющий автоматизировать и интегрировать все процессы на платформе OnlyFans.</h2>
+            <div class="mx-auto mt-10 flex items-center">
+                <a href="https://t.me" class="action-button">Начать</a>
+                <a href="https://t.me" class="ml-4">
+                    <img src="assets/Telegram_logo.svg" class="h-10">
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
+<script>
+    function toggleBurgerMenu() {
+        let menuElem = document.getElementById('header-menu');
+        if(menuElem.classList.contains('active')) {
+            menuElem.classList.remove('active');
+        } else {
+            menuElem.classList.add('active');
+        }
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const menu = document.getElementById('header-menu');
+        const menuLinks = menu.querySelectorAll('a[href^="#"]');
+
+        function closeMenu() {
+            menu.classList.remove('active');
+        }
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    closeMenu();
+                }
+            });
+        });
+    });
+
+</script>
 </html>

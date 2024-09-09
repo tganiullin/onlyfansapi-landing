@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+    @apply outline-none;
+}
+* {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+}
+
+#header-menu {
+    @apply w-screen flex flex-col fixed z-20 bg-white list-none pt-8;
+    height: calc(100lvh - 56px);
+    top: 56px;
+    transform: translateX(100vw);
+    transition: 0.2s;
+}
+#header-menu.active {
+    transform: translateX(0);
+}
+
+#header-menu > li {
+    @apply w-full;
+}
+#header-menu > li > a {
+    @apply p-4 text-xl block text-center w-full transition hover:text-sky-600;
+}
+.action-button {
+    @apply w-48 py-4 bg-sky-500 text-white text-xl rounded-xl transition shadow-lg shadow-slate-950 outline-none text-center;
+}
+.action-button:focus, .action-button:hover {
+    @apply bg-sky-600 shadow-none;
+}
+
+.screen-section {
+    @apply container relative mx-auto flex justify-center items-center flex-col px-4 text-left font-medium pt-16 z-10;
+    min-height: calc(100lvh - 56px);
+}
+.action-button-header {
+    @apply action-button;
+    @apply py-2 px-6 w-fit shadow-none text-base mr-4;
+
+}
+.decorative-circle {
+    @apply rounded-full bg-slate-800 absolute blur-3xl z-0;
+    width: 570px;
+    height: 570px;
+    left: calc(50% - 285px);
+    top: -2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .screen-section {
+        width: 42rem;
+    }
+    #header-menu {
+        @apply w-fit transform-none top-0 flex flex-row relative h-auto p-0;
+    }
+    #header-menu > li {
+        @apply w-auto p-0;
+    }
+    #header-menu > li > a {
+        @apply py-2 px-4 text-sm;
+    }
+}
