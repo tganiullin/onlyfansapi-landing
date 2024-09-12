@@ -8,8 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
-<body class="bg-slate-900">
+<body class="bg-slate-900 pb-20">
     <nav class="fixed top-0 left-0 w-screen bg-white shadow-lg shadow-slate-950 z-20">
         <div class="container mx-auto flex justify-between items-center h-14 w-screen md:w-auto">
             <div class="text-neutral-800 pl-4 shrink-0">
@@ -18,8 +21,8 @@
             </div>
             <ul id="header-menu">
                 <li><a href="#hero">Главная</a></li>
-                <li><a href="#">Функции</a></li>
-                <li><a href="#">Преимущества</a></li>
+                <li><a href="#features">Возможности</a></li>
+                <li><a href="#advantages">Преимущества</a></li>
                 <li><a href="#">Для кого</a></li>
                 <li><a href="#">Get started</a></li>
             </ul>
@@ -31,19 +34,71 @@
             <a href="https://t.me" class="hidden md:block action-button-header">Начать</a>
         </div>
     </nav>
+
+
+
     <section id="hero" class="relative">
-        <div class="decorative-circle"></div>
         <div class="screen-section">
             <h1 class="text-4xl md:text-5xl text-gray-100 leading-snug text-center">Управляйте OnlyFans при помощи мощного API</h1>
-            <h2 class="text-xl text-gray-100 font-light bg-slate-800 p-4 rounded-2xl mt-16 shadow-md shadow-slate-950 md:mx-20">Инструмент для разработчиков, маркетологов и креаторов, позволяющий автоматизировать и интегрировать все процессы на платформе OnlyFans.</h2>
+            <h2 class="text-xl text-gray-100 font-light bg-slate-800 p-6 leading-8 rounded-2xl mt-16 shadow-md shadow-black md:mx-20">Инструмент для разработчиков, маркетологов и креаторов, позволяющий автоматизировать и интегрировать все процессы на платформе OnlyFans.</h2>
             <div class="mx-auto mt-10 flex items-center">
                 <a href="https://t.me" class="action-button">Начать</a>
                 <a href="https://t.me" class="ml-4">
                     <img src="assets/Telegram_logo.svg" class="h-10">
                 </a>
             </div>
+<!--            <div class="decorative-circle"></div>-->
         </div>
     </section>
+
+
+
+    <section id="features">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h3 class="text-4xl text-white font-bold">Для чего нужен OnlyFans API Solution?</h3>
+            <div class="flex justify-between flex-wrap mt-8">
+                <div class="feature-block first">
+                    <img src="assets/site-icons/automation-icon.svg" class="mr-8 h-16">
+                    <div>
+                        <h3 class="text-2xl font-medium text-gray-200">Автоматизация контента</h3>
+                        <p class="text-base font-light mt-4 text-slate-300">Упростите процесс создания и публикации контента с помощью наших инструментов автоматизации. Планируйте публикации заранее, загружайте медиафайлы, и управляйте всеми аспектами контента прямо через API.</p>
+                    </div>
+                </div>
+                <div class="feature-block second">
+                    <img src="assets/site-icons/stats-icon.svg" class="mr-8 h-16">
+                    <div>
+                        <h3 class="text-2xl font-medium text-gray-200">Получение статистики</h3>
+                        <p class="text-base font-light mt-4 text-slate-300">Получайте актуальные данные о вашем аккаунте, включая доходы, количество подписчиков, взаимодействие с контентом, и многое другое.</p>
+                    </div>
+                </div>
+                <div class="feature-block third">
+                    <img src="assets/site-icons/box-icon.svg" class="mr-8 h-16">
+                    <div>
+                        <h3 class="text-2xl font-medium text-gray-200">Легкая интеграция</h3>
+                        <p class="text-base font-light mt-4 text-slate-300">Сервис построен на REST, обеспечивает простую и быструю интеграцию с вашими существующими системами.</p>
+                    </div>
+                </div>
+                <div class="feature-block fourth">
+                    <img src="assets/site-icons/account-settings-icon.svg" class="mr-8 h-16">
+                    <div>
+                        <h3 class="text-2xl font-medium text-gray-200">Управление аккаунтом</h3>
+                        <p class="text-base font-light mt-4 text-slate-300">Наше решение предоставляет вам полный контроль над вашим аккаунтом. Управляйте информацией профиля, подписчиками и обновляйте данные аккаунта в любое время. Независимо от того, ведете ли вы один аккаунт или управляете несколькими</p>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/code-example.avif" class="w-full md:w-9/12 mx-auto mt-36 rounded-2xl"/>
+        </div>
+    </section>
+
+
+    <section id="advantages">
+        <div class="container mx-auto px-4 max-w-screen-xl mt-36">
+            <h3 class="text-4xl text-white font-bold">Преимущества OnlyFans API Solution</h3>
+        </div>
+    </section>
+
+
+    <div class="cursor-glow"></div>
 </body>
 <script>
     function toggleBurgerMenu() {
