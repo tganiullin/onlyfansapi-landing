@@ -12,9 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </head>
-<body class="bg-slate-900 pb-20">
+<body class="bg-slate-900">
     <nav class="fixed top-0 left-0 w-screen bg-white shadow-lg shadow-slate-950 z-20">
-        <div class="container mx-auto flex justify-between items-center h-14 w-screen md:w-auto">
+        <div class="container mx-auto flex justify-between items-center h-14 max-w-screen-xl md:w-auto">
             <div class="text-neutral-800 pl-4 shrink-0">
                 <h3 class="font-bold">OnlyFans API</h3>
                 <p class="font-light leading-4">solution</p>
@@ -22,9 +22,10 @@
             <ul id="header-menu">
                 <li><a href="#hero">Главная</a></li>
                 <li><a href="#features">Возможности</a></li>
-                <li><a href="#advantages">Преимущества</a></li>
-                <li><a href="#">Для кого</a></li>
-                <li><a href="#">Get started</a></li>
+                <li><a href="#target">Для кого</a></li>
+                <li><a href="#integration">Интеграция</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#getstarted">Get Started</a></li>
             </ul>
             <button id="burger" class="outline-none pr-4 md:hidden" onclick="toggleBurgerMenu()">
                 <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -34,97 +35,284 @@
             <a href="https://t.me" class="hidden md:block action-button-header">Начать</a>
         </div>
     </nav>
+    <div class="bg-parallax-container">
+        <section id="hero" class="relative">
+            <div class="screen-section">
+                <h1 class="text-4xl md:text-5xl text-gray-100 leading-snug text-center">Управляйте OnlyFans при помощи мощного API</h1>
+                <h2 class="text-xl text-gray-100 font-light bg-slate-800 p-6 leading-8 rounded-2xl mt-16 shadow-md shadow-black md:mx-20">Инструмент для разработчиков, агенств, маркетологов и креаторов, позволяющий автоматизировать и интегрировать все процессы на платформе OnlyFans.</h2>
+                <div class="mx-auto mt-10 flex items-center">
+                    <a href="https://t.me" class="action-button">Начать</a>
+                    <a href="https://t.me" class="ml-4">
+                        <img src="assets/Telegram_logo.svg" class="h-10">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="features">
+            <div class="container mx-auto px-4 max-w-screen-xl">
+                <h3 class="text-3xl md:text-4xl text-white font-bold">Для чего нужен OnlyFans API Solution?</h3>
+                <div class="flex justify-between flex-wrap mt-8">
+                    <div class="feature-block first">
+                        <img src="assets/site-icons/automation-icon.svg" class="mr-8 h-16">
+                        <div>
+                            <h3 class="text-2xl font-medium text-gray-200">Автоматизация контента</h3>
+                            <p class="text-base font-light mt-4 text-slate-300">Упростите процесс создания и публикации контента с помощью наших инструментов автоматизации. Планируйте публикации заранее, загружайте медиафайлы, и управляйте всеми аспектами контента прямо через API.</p>
+                        </div>
+                    </div>
+                    <div class="feature-block second">
+                        <img src="assets/site-icons/stats-icon.svg" class="mr-8 h-16">
+                        <div>
+                            <h3 class="text-2xl font-medium text-gray-200">Получение статистики</h3>
+                            <p class="text-base font-light mt-4 text-slate-300">Получайте актуальные данные о вашем аккаунте, включая доходы, количество подписчиков, взаимодействие с контентом, и многое другое.</p>
+                        </div>
+                    </div>
+                    <div class="feature-block third">
+                        <img src="assets/site-icons/box-icon.svg" class="mr-8 h-16">
+                        <div>
+                            <h3 class="text-2xl font-medium text-gray-200">Легкая интеграция</h3>
+                            <p class="text-base font-light mt-4 text-slate-300">Сервис построен на REST, обеспечивает простую и быструю интеграцию с вашими существующими системами.</p>
+                        </div>
+                    </div>
+                    <div class="feature-block fourth">
+                        <img src="assets/site-icons/account-settings-icon.svg" class="mr-8 h-16">
+                        <div>
+                            <h3 class="text-2xl font-medium text-gray-200">Управление аккаунтом</h3>
+                            <p class="text-base font-light mt-4 text-slate-300">Наше решение предоставляет вам полный контроль над вашим аккаунтом. Управляйте информацией профиля, подписчиками и обновляйте данные аккаунта в любое время. Независимо от того, ведете ли вы один аккаунт или управляете несколькими</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="target">
+            <div class="container mx-auto px-4 max-w-screen-xl mt-20 md:mt-36">
+                <h3 class="text-3xl md:text-4xl text-white font-bold">Кому нужен API Solution?</h3>
+                <div class="flex mt-8 md:mt-16 carousel-container">
+                    <div class="carousel-item">
+                        <h4 class="text-white font-semibold text-3xl px-6 flex items-center"><img class="inheader-icon" src="assets/site-icons/creator-icon.svg"/>Креаторы</h4>
+                        <p class="slide-description">Креаторы создают контент на OnlyFans и сталкиваются с необходимостью управления публикациями и подписчиками вручную.</p>
+                        <ul class="text-slate-200 text-xl mt-4 px-6">
+                            <li class="font-thin mt-6"><b class="font-semibold">Автоматизация публикаций:</b> Планирование и размещение контента;</li>
+                            <li class="font-thin mt-6"><b class="font-semibold">Управление подписчиками:</b> Получение данных и автоматизация взаимодействий;</li>
+                            <li class="font-thin mt-6"><b class="font-semibold">Аналитика:</b> Статистика доходов и активности в реальном времени;</li>
+                            <li class="font-thin mt-6"><b class="font-semibold">Снижение нагрузки:</b> Больше времени для творчества благодаря автоматизации.</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-white font-semibold text-3xl px-6 flex items-center"><img class="inheader-icon" src="assets/site-icons/marketing-icon.svg"/>Маркетологи</h4>
+                        <p class="slide-description">Маркетологи занимаются продвижением контента и улучшением эффективности рекламных кампаний моделей.</p>
+                        <ul class="text-slate-200 text-xl mt-4 px-6">
+                            <li class="font-thin mt-6"><b class="font-semibold">Аналитика в реальном времени:</b> Отслеживание подписчиков, доходов и вовлеченности для быстрой корректировки стратегий;</li>
+                            <li class="font-thin mt-6"><b class="font-semibold">Автоматизация взаимодействий:</b> Управление акциями и рассылками без ручной работы;</li>
+                            <li class="font-thin mt-6"><b class="font-semibold">Интеграция с маркетингом:</b> Легкое подключение к сторонним инструментам для анализа и отчетности.</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-white font-semibold text-3xl px-6 flex items-center"><img class="inheader-icon" src="assets/site-icons/agency-icon.svg"/>Агенства</h4>
+                        <p class="slide-description">Агентства работают с несколькими аккаунтами креаторов, что требует автоматизации процессов как креаторов, так и маркетинга.</p>
+                        <ul class="text-slate-200 text-xl mt-4 px-6">
+                            <li class="font-thin mt-6"><b class="font-semibold">Управление несколькими аккаунтами:</b> Централизованное управление контентом и подписчиками для разных аккаунтов.;</li>
+                            <li class="font-thin mt-6"><b class="font-semibold">Централизованная аналитика:</b> се данные в одном месте для быстрого анализа и принятия решений.;</li>
+                            <li class="font-thin mt-6"><b class="font-semibold">Автоматизация рутинных задач:</b> Планирование публикаций и взаимодействие с подписчиками без ручного вмешательства.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
 
 
-    <section id="hero" class="relative">
-        <div class="screen-section">
-            <h1 class="text-4xl md:text-5xl text-gray-100 leading-snug text-center">Управляйте OnlyFans при помощи мощного API</h1>
-            <h2 class="text-xl text-gray-100 font-light bg-slate-800 p-6 leading-8 rounded-2xl mt-16 shadow-md shadow-black md:mx-20">Инструмент для разработчиков, маркетологов и креаторов, позволяющий автоматизировать и интегрировать все процессы на платформе OnlyFans.</h2>
-            <div class="mx-auto mt-10 flex items-center">
+
+
+
+
+
+
+
+    <section id="integration">
+        <div class="container mx-auto px-4 max-w-screen-xl mt-16 md:mt-36">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 flex flex-col justify-center pr-0 md:pr-16">
+                    <h3 class="text-3xl md:text-4xl text-white font-bold">Легкая интеграция с вашими системами</h3>
+                    <p class="text-slate-400 mt-12 text-lg">Наш REST API совместим с любыми платформами и приложениями. Независимо от того, работаете ли вы с CRM, аналитическими системами или другими инструментами, наше API легко подключается к существующим рабочим процессам для полной автоматизации.</p>
+                </div>
+                <div class="w-full md:w-1/2 flex items-center mt-12 md:mt-0">
+                    <div class="bg-slate-600 w-full p-8 rounded-2xl bg-opacity-75 backdrop-blur-sm shadow-slate-950 shadow-md">
+                        <img src="assets/code-example.png" class="w-full rounded-lg"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq">
+        <div class="container mx-auto px-4 max-w-screen-xl mt-36">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-3/5">
+                    <div class="w-full bg-slate-800 p-8 rounded-2xl bg-opacity-60 backdrop-blur-sm shadow-lg shadow-slate-950 flex flex-wrap">
+                        <div class="w-2/12 flex items-center">
+                            <img class="w-8/12 filtered-to-blue" src="assets/site-icons/faq-icon.svg"/>
+                        </div>
+                        <div class="w-10/12 flex items-center">
+                            <h3 class="text-3xl md:text-4xl text-white font-bold">FAQ</h3>
+                        </div>
+                        <div class="w-0 lg:w-2/12">
+
+                        </div>
+                        <div class="w-full lg:w-10/12">
+                            <div class="border-b border-slate-600 mt-8 lg:mt-0">
+                                <button class="w-full py-4 flex justify-between items-center focus:outline-none accordion-button">
+                                    <span class="font-semibold text-lg text-slate-100">Можно ли управлять несколькими аккаунтами через API?</span>
+                                    <svg class="transform transition-transform duration-300 w-5 h-5 text-sky-500 accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                                    <div class="p-4 text-slate-300">
+                                        Да, с помощью нашего API вы можете управлять несколькими аккаунтами одновременно. Это особенно полезно для агентств, которые работают с разными креаторами и хотят централизовать управление контентом и подписчиками.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-slate-600">
+                                <button class="w-full py-4 flex justify-between items-center focus:outline-none accordion-button">
+                                    <span class="font-semibold text-lg text-slate-100">Какие данные я могу получить через API?</span>
+                                    <svg class="transform transition-transform duration-300 w-5 h-5 text-sky-500 accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                                    <div class="p-4 text-slate-300">
+                                        API предоставляет доступ к разнообразной статистике, включая данные о доходах, активности подписчиков, количестве просмотров, лайков и комментариев. Вы можете получать информацию в реальном времени, что помогает лучше отслеживать и анализировать динамику роста.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-slate-600">
+                                <button class="w-full py-4 flex justify-between items-center focus:outline-none accordion-button">
+                                    <span class="font-semibold text-lg text-slate-100">Как обеспечить безопасность данных при работе с API?</span>
+                                    <svg class="transform transition-transform duration-300 w-5 h-5 text-sky-500 accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                                    <div class="p-4 text-slate-300">
+                                        Мы используем современные методы шифрования и аутентификации для защиты данных. Все передаваемые данные шифруются, а доступ к API осуществляется через безопасные ключи, которые вы можете контролировать и управлять. Ваши передаваемые данные не хранятся на серверах.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-slate-600">
+                                <button class="w-full py-4 flex justify-between items-center focus:outline-none accordion-button">
+                                    <span class="font-semibold text-lg text-slate-100">Могу ли я автоматизировать публикацию контента?</span>
+                                    <svg class="transform transition-transform duration-300 w-5 h-5 text-sky-500 accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                                    <div class="p-4 text-slate-300">
+                                        Да, API позволяет вам планировать и автоматически публиковать контент на OnlyFans в нужное время. Вы можете создавать расписания публикаций и управлять ими без необходимости вручного доступа к платформе.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-slate-600">
+                                <button class="w-full py-4 flex justify-between items-center focus:outline-none accordion-button">
+                                    <span class="font-semibold text-lg text-slate-100">Можно ли управлять финансами через API?</span>
+                                    <svg class="transform transition-transform duration-300 w-5 h-5 text-sky-500 accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                                    <div class="p-4 text-slate-300">
+                                        Да, через API вы можете отслеживать доходы, просматривать финансовую статистику и управлять платежами. Вы также можете запросить вывод средств в любое удобное время, что позволяет контролировать финансовые операции напрямую через API.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-slate-600">
+                                <button class="w-full py-4 flex justify-between items-center focus:outline-none accordion-button">
+                                    <span class="font-semibold text-lg text-slate-100">Какие тарифы у вашего API?</span>
+                                    <svg class="transform transition-transform duration-300 w-5 h-5 text-sky-500 accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                                    <div class="p-4 text-slate-300">
+                                        Мы предлагаем несколько тарифных планов в зависимости от объема использования API. Более подробную информацию о тарифах можно получить, связавшись с менеджером для получения индивидуального предложения.
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="w-full py-4 flex justify-between items-center focus:outline-none accordion-button">
+                                    <span class="font-semibold text-lg text-slate-100">Как начать работу с API?</span>
+                                    <svg class="transform transition-transform duration-300 w-5 h-5 text-sky-500 accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                                    <div class="p-4 text-slate-300">
+                                        Вам нужно связаться с менеджером, получить ключ доступа к API и следовать пошаговой инструкции в документации. Интеграция не займет много времени, и вы сможете начать автоматизацию сразу после настройки.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/5 mt-8 lg:mt-0 flex items-center justify-center">
+                    <h4 class="text-3xl text-white font-bold text-center">Детальнее в <br><a class="text-sky-500 underline underline-offset-8 transition hover:text-sky-600" href="#">документации</a> API</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="getstarted">
+        <div class="container mx-auto px-4 max-w-screen-xl mt-36">
+            <h3 class="text-3xl md:text-4xl text-white font-bold text-center">Готовы автоматизировать свою работу с OnlyFans?</h3>
+            <p class="w-full md:w-1/2 text-center text-slate-200 text-2xl mx-auto mt-12">Наш API создан, чтобы упростить вам жизнь. Начните автоматизировать управление контентом, подписчиками и финансами уже сегодня!</p>
+            <div class="mx-auto mt-10 flex items-center justify-center">
                 <a href="https://t.me" class="action-button">Начать</a>
                 <a href="https://t.me" class="ml-4">
                     <img src="assets/Telegram_logo.svg" class="h-10">
                 </a>
             </div>
-<!--            <div class="decorative-circle"></div>-->
         </div>
     </section>
 
 
-
-    <section id="features">
+    <footer class="mt-36 py-8 bg-slate-950">
         <div class="container mx-auto px-4 max-w-screen-xl">
-            <h3 class="text-4xl text-white font-bold">Для чего нужен OnlyFans API Solution?</h3>
-            <div class="flex justify-between flex-wrap mt-8">
-                <div class="feature-block first">
-                    <img src="assets/site-icons/automation-icon.svg" class="mr-8 h-16">
-                    <div>
-                        <h3 class="text-2xl font-medium text-gray-200">Автоматизация контента</h3>
-                        <p class="text-base font-light mt-4 text-slate-300">Упростите процесс создания и публикации контента с помощью наших инструментов автоматизации. Планируйте публикации заранее, загружайте медиафайлы, и управляйте всеми аспектами контента прямо через API.</p>
-                    </div>
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/3">
+                    <h5 class="mb-4 lg:mb-0 text-white text-2xl">© OnlyFans API Solution</h5>
+                    <a class="text-slate-300 text-xl underline underline-offset-2 cursor-pointer" href="https://onlyfansapi.ru">onlyfansapi.ru</a>
                 </div>
-                <div class="feature-block second">
-                    <img src="assets/site-icons/stats-icon.svg" class="mr-8 h-16">
-                    <div>
-                        <h3 class="text-2xl font-medium text-gray-200">Получение статистики</h3>
-                        <p class="text-base font-light mt-4 text-slate-300">Получайте актуальные данные о вашем аккаунте, включая доходы, количество подписчиков, взаимодействие с контентом, и многое другое.</p>
-                    </div>
+                <div class="w-full mt-4 lg:mt-0 lg:w-1/3 flex items-center lg:justify-center">
+                    <a class="text-slate-400 text-xl cursor-pointer" href="mailto:admin@onlyfansapi.ru">admin@onlyfansapi.ru</a>
+
                 </div>
-                <div class="feature-block third">
-                    <img src="assets/site-icons/box-icon.svg" class="mr-8 h-16">
-                    <div>
-                        <h3 class="text-2xl font-medium text-gray-200">Легкая интеграция</h3>
-                        <p class="text-base font-light mt-4 text-slate-300">Сервис построен на REST, обеспечивает простую и быструю интеграцию с вашими существующими системами.</p>
-                    </div>
-                </div>
-                <div class="feature-block fourth">
-                    <img src="assets/site-icons/account-settings-icon.svg" class="mr-8 h-16">
-                    <div>
-                        <h3 class="text-2xl font-medium text-gray-200">Управление аккаунтом</h3>
-                        <p class="text-base font-light mt-4 text-slate-300">Наше решение предоставляет вам полный контроль над вашим аккаунтом. Управляйте информацией профиля, подписчиками и обновляйте данные аккаунта в любое время. Независимо от того, ведете ли вы один аккаунт или управляете несколькими</p>
-                    </div>
+                <div class="w-full mt-8 lg:mt-0 lg:w-1/3 flex justify-center lg:justify-end items-center">
+                    <a class="text-white flex" href="https://t.me">
+                        <img src="assets/Telegram_logo.svg" class="h-6 mr-2">
+                        Свяжитесь с нами
+                    </a>
                 </div>
             </div>
-            <img src="assets/code-example.avif" class="w-full md:w-9/12 mx-auto mt-36 rounded-2xl"/>
         </div>
-    </section>
-
-
-    <section id="advantages">
-        <div class="container mx-auto px-4 max-w-screen-xl mt-36">
-            <h3 class="text-4xl text-white font-bold">Преимущества OnlyFans API Solution</h3>
-        </div>
-    </section>
-
-
-    <div class="cursor-glow"></div>
+    </footer>
+    <div class="cursor-glow hidden lg:block"></div>
 </body>
-<script>
-    function toggleBurgerMenu() {
-        let menuElem = document.getElementById('header-menu');
-        if(menuElem.classList.contains('active')) {
-            menuElem.classList.remove('active');
-        } else {
-            menuElem.classList.add('active');
-        }
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        const menu = document.getElementById('header-menu');
-        const menuLinks = menu.querySelectorAll('a[href^="#"]');
-
-        function closeMenu() {
-            menu.classList.remove('active');
-        }
-
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    closeMenu();
-                }
-            });
-        });
-    });
-
-</script>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </html>
