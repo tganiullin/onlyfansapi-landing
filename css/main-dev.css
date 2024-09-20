@@ -26,7 +26,7 @@ button {
 }
 
 #header-menu {
-    @apply w-screen flex flex-col fixed z-20 bg-white list-none pt-8;
+    @apply w-screen flex flex-col fixed z-20 bg-inherit list-none pt-8 text-white;
     height: 100lvh;
     top: 56px;
     transform: translateX(100vw);
@@ -40,7 +40,7 @@ button {
     @apply w-full;
 }
 #header-menu > li > a {
-    @apply p-4 text-xl block text-center w-full transition hover:text-sky-600;
+    @apply p-4 text-xl block text-center w-full transition hover:text-sky-400;
 }
 .action-button {
     @apply w-48 py-4 bg-sky-500 text-white text-xl rounded-xl transition shadow-lg shadow-slate-950 outline-none text-center relative;
@@ -150,6 +150,9 @@ button {
         width: calc(65% - 0.75rem);
     }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 768px) {
+    #header-menu {
+        @apply bg-slate-700;
+    }
 
 }
